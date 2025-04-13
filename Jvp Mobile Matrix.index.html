@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 20px;
+    }
+    .accordion {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .accordion-item {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .accordion-header {
+      background: #f1f1f1;
+      cursor: pointer;
+      padding: 15px;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+    }
+    .accordion-content {
+      display: none;
+      padding: 15px;
+      border-top: 1px solid #ddd;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .grid-header {
+      font-weight: bold;
+      background: #e9e9e9;
+      padding: 8px;
+    }
+    .low { background: #ffdddd; }
+    .med { background: #fff0b3; }
+    .high { background: #ddffdd; }
+    .na { background: #eeeeee; }
+  </style>
+</head>
+<body>
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-header">Ability to Sell</div>
+      <div class="accordion-content grid">
+        <div class="grid-header">Agent</div>
+        <div class="grid-header">Manager</div>
+        <div class="grid-header">JVP</div>
+        <div class="grid-header">Franchise</div>
+        <div class="high">High</div>
+        <div class="low">Low</div>
+        <div class="high">High</div>
+        <div class="med">Med</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Earnings on Own Sales</div>
+      <div class="accordion-content grid">
+        <div class="grid-header">Agent</div>
+        <div class="grid-header">Manager</div>
+        <div class="grid-header">JVP</div>
+        <div class="grid-header">Franchise</div>
+        <div class="med">Med</div>
+        <div class="low">Low</div>
+        <div class="high">High</div>
+        <div class="high">High</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Earnings on Team Sales</div>
+      <div class="accordion-content grid">
+        <div class="grid-header">Agent</div>
+        <div class="grid-header">Manager</div>
+        <div class="grid-header">JVP</div>
+        <div class="grid-header">Franchise</div>
+        <div class="na">N/A</div>
+        <div class="med">Med</div>
+        <div class="high">High</div>
+        <div class="med">Med</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Responsibility Level</div>
+      <div class="accordion-content grid">
+        <div class="grid-header">Agent</div>
+        <div class="grid-header">Manager</div>
+        <div class="grid-header">JVP</div>
+        <div class="grid-header">Franchise</div>
+        <div class="low">Low</div>
+        <div class="high">High</div>
+        <div class="med">Med</div>
+        <div class="high">High</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Operational Costs</div>
+      <div class="accordion-content grid">
+        <div class="grid-header">Agent</div>
+        <div class="grid-header">Manager</div>
+        <div class="grid-header">JVP</div>
+        <div class="grid-header">Franchise</div>
+        <div class="low">Low</div>
+        <div class="low">Low</div>
+        <div class="low">Low</div>
+        <div class="high">High</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">Support Structure</div>
+      <div class="accordion-content grid">
+        <div class="grid-header">Agent</div>
+        <div class="grid-header">Manager</div>
+        <div class="grid-header">JVP</div>
+        <div class="grid-header">Franchise</div>
+        <div class="high">High</div>
+        <div class="high">High</div>
+        <div class="high">High</div>
+        <div class="med">Med</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
+
